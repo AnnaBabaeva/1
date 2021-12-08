@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".ui.home.HomeFragmentFragment">
+
+
+    <TextView
+        android:id="@+id/filter_all"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="All"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filter_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_date"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@drawable/filters_home_fragment"
+        android:text="Date"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_all"
+        app:layout_constraintEnd_toStartOf="@+id/filter_time"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_all"
+        app:layout_constraintTop_toTopOf="@+id/filter_all" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_time"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@drawable/filters_home_fragment"
+        android:text="Time"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_date"
+        app:layout_constraintEnd_toStartOf="@+id/filter_hunger"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_date"
+        app:layout_constraintTop_toTopOf="@+id/filter_date" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_hunger"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/filters_home_fragment"
+        android:text="Hunger"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_time"
+        app:layout_constraintEnd_toStartOf="@+id/filter_my"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_time"
+        app:layout_constraintTop_toTopOf="@+id/filter_time" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_my"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="My Filter"
+        android:background="@drawable/filters_home_fragment"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_hunger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_hunger"
+        app:layout_constraintTop_toTopOf="@+id/filter_hunger" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@+id/filter_all"
+        app:layout_constraintTop_toBottomOf="@+id/filter_all"
+        tools:listitem="@layout/recycler_view_home" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_white"
+        android:contentDescription="TODO" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

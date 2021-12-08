@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FoodJournal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- <item name="android:windowBackground">@color/color_background</item>
+         <item name="android:colorBackground">@color/color_background</item>-->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color fab. -->
+        <item name="colorSecondary">@color/color_accent</item>
+        <!-- fab -->
+        <item name="colorSecondaryVariant">@color/color_primary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Shape -->
+        <item name="shapeAppearanceSmallComponent">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/AppShapeAppearance.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/AppShapeAppearance.LargeComponent</item>
+
+        <item name="android:textColor">@color/color_primary_text</item>
+        <!-- Цвет текста-->
+        <item name="android:editTextColor">@color/color_primary_text</item>
+        <!-- фон в editText-->
+        <item name="android:editTextBackground">@color/white</item>
+
+        <!-- Cтиль для Button. -->
+        <item name="materialButtonStyle">@style/MyButton</item>
+    </style>
+
+
+    <!-- Создано автоматически. -->
+    <style name="Theme.FoodJournal.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.FoodJournal.AppBarOverlay" parent="Theme.FoodJournal" />
+    <style name="Theme.FoodJournal.PopupOverlay" parent="Theme.FoodJournal" />
+
+</resources>

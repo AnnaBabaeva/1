@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:background="@color/color_background">
+
+        <ImageButton
+            android:id="@+id/profile_imageView"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/profile_foto"
+            android:padding="8dp"
+            android:src="@drawable/ic_camera_profile"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circle" />
+
+        <EditText
+            android:id="@+id/profile_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:textAlignment="textStart"
+            android:padding="8dp"
+            android:textSize="12sp"
+            tools:text="text"
+            tools:textSize="12sp"
+            android:background="@drawable/filters_home_fragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/profile_my_parameters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="МОИ ПАРАМЕТРЫ СЕГОДНЯ"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/profile_edit_parameters"
+            app:layout_constraintTop_toBottomOf="@+id/profile_text" />
+
+        <EditText
+            android:id="@+id/profile_edit_parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/filters_home_fragment"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_my_parameters"
+            tools:text="100 - 100 - 100" />
+
+        <EditText
+            android:id="@+id/profile_edit_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/filters_home_fragment"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_edit_parameters"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/profile_edit_parameters"
+            app:layout_constraintTop_toBottomOf="@+id/profile_edit_parameters"
+            tools:text="100" />
+
+        <TextView
+            android:id="@+id/profile_my_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="ЦЕЛЬ"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/profile_goal_kal"
+            app:layout_constraintTop_toBottomOf="@+id/profile_edit_weight" />
+
+        <EditText
+            android:id="@+id/profile_goal_kal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/filters_home_fragment"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_my_goal"
+            tools:text="3500" />
+
+        <EditText
+            android:id="@+id/profile_goal_parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/filters_home_fragment"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_goal_kal"
+            tools:text="90 - 60 - 90" />
+
+        <EditText
+            android:id="@+id/profile_goal_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/filters_home_fragment"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_goal_parameters"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Добро пожаловать!"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/profile_text"
+            app:layout_constraintTop_toBottomOf="@+id/profile_imageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

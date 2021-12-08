@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_background"
+    tools:context=".ui.statistic.StatisticFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background">
+
+    <TextView
+        android:id="@+id/statistic_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="СЕГОДНЯ"
+        android:textColor="@color/color_primary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/statistic_food"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Приемов пищи"
+        android:textColor="@color/color_primary_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/statistic_today"
+        app:layout_constraintTop_toBottomOf="@+id/statistic_today"
+        app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/statistic_kal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="Калорий"
+            android:textColor="@color/color_primary_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/statistic_food"
+            app:layout_constraintEnd_toStartOf="@+id/statistic_mood"
+            app:layout_constraintStart_toEndOf="@+id/statistic_food"
+            app:layout_constraintTop_toTopOf="@+id/statistic_food" />
+
+        <TextView
+            android:id="@+id/statistic_mood"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="Настроение"
+            android:textColor="@color/color_primary_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/statistic_kal"
+            app:layout_constraintEnd_toStartOf="@+id/statistic_kal"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/statistic_kal"
+            app:layout_constraintTop_toTopOf="@+id/statistic_kal" />
+
+    <TextView
+        android:id="@+id/statistic_food_result"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="532dp"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="@color/color_primary_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/statistic_food"
+        app:layout_constraintTop_toBottomOf="@+id/statistic_food"
+        app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/statistic_kal_result"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="3500"
+            android:textColor="@color/color_primary_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/statistic_food_result"
+            app:layout_constraintEnd_toStartOf="@+id/statistic_mood_result"
+            app:layout_constraintStart_toEndOf="@+id/statistic_food_result"
+            app:layout_constraintTop_toTopOf="@+id/statistic_food_result"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+        android:id="@+id/statistic_mood_result"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="@drawable/smile"
+        app:layout_constraintBottom_toBottomOf="@+id/statistic_kal_result"
+        app:layout_constraintEnd_toEndOf="@+id/statistic_mood"
+        app:layout_constraintStart_toEndOf="@+id/statistic_kal_result"
+        app:layout_constraintTop_toTopOf="@+id/statistic_kal_result" />
+
+    <TextView
+        android:id="@+id/statistic_cause_food"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="436dp"
+        android:gravity="center"
+        android:text="Причина приема пищи"
+        android:textColor="@color/color_primary_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/statistic_food_result"
+        app:layout_constraintTop_toBottomOf="@+id/statistic_food_result"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/statistic_color"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/my_filter_color_1"
+        android:padding="5dp"
+        android:textColor="@color/color_primary_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/statistic_cause_food"
+        app:layout_constraintEnd_toEndOf="@+id/statistic_mood_result"
+        app:layout_constraintStart_toStartOf="@+id/statistic_mood_result"
+        app:layout_constraintTop_toBottomOf="@+id/statistic_mood_result"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/statistic_7_day"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/filters_home_fragment"
+        android:gravity="center"
+        android:text="7 дней"
+        android:textColor="@color/color_primary_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statistic_cause_food"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/statistic_14_day"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/filters_home_fragment"
+        android:text="14 дней"
+        android:textColor="@color/color_primary_text"
+        android:textSize="12sp"
+        android:textStyle=""
+        app:layout_constraintBottom_toBottomOf="@+id/statistic_7_day"
+        app:layout_constraintEnd_toStartOf="@+id/statistic_month"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/statistic_7_day"
+        app:layout_constraintTop_toTopOf="@+id/statistic_7_day" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/statistic_month"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/filters_home_fragment"
+        android:text="МЕСЯЦ"
+        android:textColor="@color/color_primary_text"
+        app:layout_constraintBottom_toBottomOf="@+id/statistic_14_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/statistic_14_day"
+        app:layout_constraintTop_toTopOf="@+id/statistic_14_day" />
+
+        <TextView
+            android:id="@+id/statistic_taste_food"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Какой едой, я чаще всего заедаю эмоциональный голод"
+            android:textColor="@color/color_primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statistic_7_day" />
+
+        <TextView
+            android:id="@+id/statistic_taste"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/filters_home_fragment"
+            android:padding="15dp"
+            android:text="СОЛЕНОЕ"
+            android:textColor="@color/color_primary_text"
+            android:textSize="12sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/statistic_taste_food"
+            app:layout_constraintStart_toStartOf="@+id/statistic_taste_food"
+            app:layout_constraintTop_toBottomOf="@+id/statistic_taste_food" />
+
+        <TextView
+            android:id="@+id/statistic_average_calories"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Среднее количество калорий"
+            android:textColor="@color/color_primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/statistic_taste"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/statistic_taste"
+            app:layout_constraintTop_toBottomOf="@+id/statistic_taste" />
+
+        <TextView
+            android:id="@+id/statistic_calories"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/filters_home_fragment"
+            android:padding="15dp"
+            android:text="5000"
+            android:textColor="@color/color_primary_text"
+            android:textSize="12sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/statistic_average_calories"
+            app:layout_constraintStart_toStartOf="@+id/statistic_average_calories"
+            app:layout_constraintTop_toBottomOf="@+id/statistic_average_calories" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">FoodJournal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Клаудия</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="nav_statistic">Статистика</string>
+    <string name="nav_about">О приложении</string>
+    <string name="nav_appetite_control">Аppetite Сontrol</string>
+    <string name="nav_pdf">PDF</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time">12.00</string>
+    <string name="date">12.04.2021</string>
+    <string name="newNote_editText_title">Кто был рядом?</string>
+    <string name="newNote_editText_text">Была одна</string>
+    <string name="my_filter">My Filter</string>
+
+    <!-- 1. Spinner cause_food -->
+    <string-array name="dropdown_cause_food">
+        <item>Причина приема пищи</item>
+        <item>Завтрак, обед, ужин</item>
+        <item>Легкий перекус</item>
+        <item>Награда</item>
+        <item>Сижу за компьютером</item>
+        <item>От скуки</item>
+        <item>Стресс</item>
+        <item>Очень хорошеее настроение</item>
+    </string-array>
+
+    <!--2. spinner_hunger -->
+    <string-array name="dropdown_hunger">
+        <item>Уровень голода</item>
+        <item>10 баллов</item>
+        <item>8,9 баллов</item>
+        <item>6,7 баллов</item>
+        <item>5 баллов</item>
+        <item>4 балла</item>
+        <item>Менее 3-х баллов</item>
+    </string-array>
+
+    <!--3. physical sensations before eating -->
+    <string-array name="dropdown_sensations_before_eating">
+        <item>Физ. ощущения до приема пищи</item>
+        <item>я не чувствовала голод</item>
+        <item>сильный упадок сил</item>
+        <item>дискомфорт в желудке</item>
+        <item>приятный, нарастающий голод</item>
+        <item>слюноотделение</item>
+        <item>урчал желудок</item>
+    </string-array>
+
+    <!--4. sensations feelings before -->
+    <string-array name="dropdown_sensations_feelings_before">
+        <item>Мои чувства до приема пищи</item>
+        <item>Скука или грусть</item>
+        <item>Чувство одиночества</item>
+        <item>Беспокойство</item>
+        <item>Сильная радость</item>
+        <item>Я в балансе</item>
+        <item>хорошее настроение</item>
+    </string-array>
+
+    <!--5. sensations taste of food -->
+    <string-array name="dropdown_taste_of_food">
+        <item>Вид блюда/вкус</item>
+        <item>Соленый</item>
+        <item>Сладкий</item>
+        <item>Мучное</item>
+        <item>Мясо</item>
+        <item>Шоколад</item>
+        <item>Острый</item>
+    </string-array>
+
+    <!--6. physical sensations after eating -->
+    <string-array name="dropdown_sensations_after_eating">
+        <item>Физ. ощущения после еды</item>
+        <item>Бурлит в животе</item>
+        <item>Изжога</item>
+        <item>Тяжесть в животе</item>
+        <item>Вздутие</item>
+        <item>Расстройство кишечника</item>
+        <item>Все в норме</item>
+    </string-array>
+
+    <!--7. sensations feelings after -->
+    <string-array name="dropdown_sensations_feelings_after">
+        <item>Мои чувства после еды</item>
+        <item>Чувство вины</item>
+        <item>Стыд</item>
+        <item>Разочарование</item>
+        <item>Раздражение и злость</item>
+        <item>Хочется плакать</item>
+        <item>Удовлетворение</item>
+    </string-array>
+
+    <!--8. kal-->
+    <string-array name="spinner_calories">
+        <item>Калории</item>
+        <item>Белки</item>
+        <item>Жиры</item>
+        <item>Углеводы</item>
+        <item>Сахар</item>
+        <item>Количество воды</item>
+    </string-array>
+
+
+    <!--Camera-->
+    <string name="camera_rationale_title">Разрешить доступ к камере?</string>
+    <string name="camera_rationale_text">Приложению требуется доступ к камере для фотографирования.\nВы сможете отозвать доступ через меню настроек в любой момент.</string>
+    <string name="camera_rationale_button">Разрешить</string>
+    <string name="camera_dont_ask_title">Доступ к камере запрещен…</string>
+    <string name="camera_dont_ask_text">Приложению требуется доступ к камере для фотографирования.\nПожалуйста, предоставьте доступ в меню настроек.</string>
+    <string name="camera_dont_ask_button">Настройки</string>
+    <string name="something_wrong">Что-то пошло не так…</string>
+    <string name="denied_toast">Доступ запрещен</string>
+
+
+</resources>

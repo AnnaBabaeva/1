@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:fillViewport="true"
+    tools:context=".ui.note.NewNoteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:background="@color/color_background">
+
+        <ImageView
+            android:id="@+id/new_note_image"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="centerCrop"
+            android:background="@color/color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/new_note_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginTop="190dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_1440" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/new_note_button_add_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-30dp"
+            android:adjustViewBounds="true"
+            app:cornerRadius="30dp"
+            android:padding="10dp"
+            app:iconPadding="0dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:iconGravity="textStart"
+            app:iconSize="24dp"
+            app:icon="@drawable/ic_camera_new_note_food_foto"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/new_note_rectangle" />
+
+        <TextView
+            android:id="@+id/new_note_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:gravity="center"
+            tools:text="12.04.2021"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_note_button_add_image" />
+
+        <TextView
+            android:id="@+id/new_note_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            tools:text="12.00"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/new_note_date"
+            app:layout_constraintStart_toStartOf="@+id/new_note_date"
+            app:layout_constraintTop_toBottomOf="@+id/new_note_date" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_note_diary"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="50dp"
+            tools:itemCount="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_note_time"
+            tools:listitem="@layout/recyclerview_new_note_text" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/newNote_add_button_diary"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:scaleType="center"
+            app:layout_constraintStart_toStartOf="@+id/recycler_view_note_diary"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_note_diary"
+            app:shapeAppearanceOverlay="@style/Circle"
+            app:srcCompat="@drawable/ic_add_pink" />
+
+        <!-- Выпадающее меню-->
+        <!-- 1 Причина приема пищи-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_cause_food"
+            style="@style/MySpinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_recommendation">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_cause_food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="16dp"
+                tools:text="Причина приема пищи" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 2 Степень голода-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout__hunger"
+            style="@style/MySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_cause_food">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_hunger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="16dp"
+                tools:text="Степень голода" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 3 Физические ощущения до приема пищи-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sensations_before_eating"
+            style="@style/MySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout__hunger">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_sensations_before_eating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="16dp"
+                tools:text="Физические ощущения до приема пищи" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 4 Мои чувства до приема пищи-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sensations_feelings_before"
+            style="@style/MySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_sensations_before_eating">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_sensations_feelings_before"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="16dp"
+                tools:text="Мои чувства до приема пищи" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 5 Вид блюда/вкус-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_taste_food"
+            style="@style/MySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_sensations_feelings_before">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_taste_food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="16dp"
+                tools:text="Вид блюда/вкус" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 6 Физические ощущения после еды-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sensations_after_eating"
+            style="@style/MySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_taste_food">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_sensations_after_eating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="16dp"
+                tools:text="Физические ощущения после еды" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 7 Мои чувства после еды-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_sensations_feelings_after"
+            style="@style/MySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_sensations_after_eating">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdown_sensations_feelings_after"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="16dp"
+                tools:text="Мои чувства после еды" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView_recommendation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Рекомендовано заполнить"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/layout_cause_food"
+            app:layout_constraintTop_toBottomOf="@+id/newNote_add_button_diary" />
+
+        <TextView
+            android:id="@+id/textView_calories_new_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Дополнительные опции"
+            app:layout_constraintStart_toStartOf="@+id/recycler_view_calories"
+            app:layout_constraintTop_toBottomOf="@+id/layout_sensations_feelings_after" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_calories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_calories_new_note"
+            tools:itemCount="2"
+            tools:listitem="@layout/recycler_view_new_note_nutritional_value" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/new_note_add_button_calories"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:scaleType="center"
+            app:shapeAppearanceOverlay="@style/Circle"
+            app:srcCompat="@drawable/ic_add_pink"
+            app:layout_constraintStart_toStartOf="@+id/recycler_view_calories"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_calories" />
+
+        <TextView
+            android:id="@+id/newNote_text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Причина приема пищи"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_note_add_button_calories" />
+
+        <TextView
+            android:id="@+id/newNote_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="Физический голод"
+            android:textColor="@color/color_my_filter_3"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newNote_text_result" />
+
+        <TextView
+            android:id="@+id/new_note_my_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:text="@string/my_filter"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newNote_result" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filter_color_red"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/my_filter_color_1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/filter_color_green"
+            app:layout_constraintStart_toStartOf="@+id/new_note_my_filter"
+            app:layout_constraintTop_toBottomOf="@+id/new_note_my_filter" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filter_color_green"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/my_filter_color_2"
+            app:layout_constraintBottom_toBottomOf="@+id/filter_color_red"
+            app:layout_constraintEnd_toStartOf="@+id/filter_color_yellow"
+            app:layout_constraintStart_toEndOf="@+id/filter_color_red"
+            app:layout_constraintTop_toTopOf="@+id/filter_color_red" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filter_color_yellow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/my_filter_color_3"
+            app:layout_constraintBottom_toBottomOf="@+id/filter_color_green"
+            app:layout_constraintEnd_toStartOf="@+id/filter_color_blue"
+            app:layout_constraintStart_toEndOf="@+id/filter_color_green"
+            app:layout_constraintTop_toTopOf="@+id/filter_color_green" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filter_color_blue"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/my_filter_color_4"
+            app:layout_constraintBottom_toBottomOf="@+id/filter_color_yellow"
+            app:layout_constraintEnd_toStartOf="@+id/filter_color_more"
+            app:layout_constraintStart_toEndOf="@+id/filter_color_yellow"
+            app:layout_constraintTop_toTopOf="@+id/filter_color_yellow" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filter_color_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/my_filter_color_5"
+            app:layout_constraintBottom_toBottomOf="@+id/filter_color_blue"
+            app:layout_constraintEnd_toEndOf="@+id/new_note_my_filter"
+            app:layout_constraintStart_toEndOf="@+id/filter_color_blue"
+            app:layout_constraintTop_toTopOf="@+id/filter_color_blue" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

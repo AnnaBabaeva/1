@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <!-- Filter. -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974" />
+
+    <TextView
+        android:id="@+id/new_note_my_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:gravity="center"
+        android:text="@string/my_filter"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_color_red"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        style="@style/Circle"
+        app:layout_constraintEnd_toStartOf="@+id/filter_color_green"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/new_note_my_filter"
+        app:layout_constraintTop_toBottomOf="@+id/new_note_my_filter" />
+
+    <Button
+        android:id="@+id/filter_color_green"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/color_primary_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_color_red"
+        app:layout_constraintEnd_toStartOf="@+id/filter_color_yellow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_color_red"
+        app:layout_constraintTop_toTopOf="@+id/filter_color_red" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/filter_color_yellow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        app:shapeAppearanceOverlay="@style/Circle"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_color_green"
+        app:layout_constraintEnd_toStartOf="@+id/filter_color_blue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_color_green"
+        app:layout_constraintTop_toTopOf="@+id/filter_color_green" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_color_blue"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/my_filter_color_1"
+        android:textColor="@color/color_primary_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_color_yellow"
+        app:layout_constraintEnd_toStartOf="@+id/filter_color_more"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_color_yellow"
+        app:layout_constraintTop_toTopOf="@+id/filter_color_yellow" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filter_color_more"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/my_filter_color_1"
+        android:textColor="@color/color_primary_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_color_blue"
+        app:layout_constraintEnd_toEndOf="@+id/new_note_my_filter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filter_color_blue"
+        app:layout_constraintTop_toTopOf="@+id/filter_color_blue"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/filter_all"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="12dp"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/filter_date"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="16dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_all"
+        app:layout_constraintStart_toEndOf="@+id/filter_all"
+        app:layout_constraintTop_toTopOf="@+id/filter_all"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/filter_time"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="112dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_date"
+        app:layout_constraintStart_toEndOf="@+id/filter_date"
+        app:layout_constraintTop_toTopOf="@+id/filter_date"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/filter_hunger"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="112dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_time"
+        app:layout_constraintStart_toEndOf="@+id/filter_time"
+        app:layout_constraintTop_toTopOf="@+id/filter_time"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/filter_my"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="112dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_hunger"
+        app:layout_constraintStart_toEndOf="@+id/filter_hunger"
+        app:layout_constraintTop_toTopOf="@+id/filter_hunger"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

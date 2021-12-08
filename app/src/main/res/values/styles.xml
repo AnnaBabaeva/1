@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Для Button. -->
+    <style name="MyButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/color_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+   <style name="MySpinner" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="shapeAppearanceOverlay">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="boxStrokeColor">@color/color_accent</item>
+    </style>
+
+    <style name="MySpinner2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="shapeAppearanceOverlay">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="boxStrokeColor">@color/color_accent</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+
+    <!-- Круглые кнопки  -->
+    <style name="Circle" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="colorPrimary">@color/color_accent</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

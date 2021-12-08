@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+
+    <EditText
+        android:id="@+id/newNote_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:lines="1"
+        android:padding="12dp"
+        android:gravity="start|top"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:hint="Вопрос"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/newNote_editText_title" />
+
+    <!-- android:background="@drawable/stroke"-->
+    <EditText
+        android:id="@+id/newNote_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/stroke"
+        android:padding="12dp"
+        android:minLines="2"
+        android:hint="Ответ"
+        android:gravity="start|top"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/newNote_title"
+        app:layout_constraintStart_toStartOf="@+id/newNote_title"
+        app:layout_constraintTop_toBottomOf="@+id/newNote_title"
+        tools:text="@string/newNote_editText_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
